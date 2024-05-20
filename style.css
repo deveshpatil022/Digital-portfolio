@@ -1,0 +1,248 @@
+:root {
+    /* Define CSS variables */
+    --primary-color: rgb(43, 139, 190);
+    --secondary-color: rgb(127, 85, 233);
+    --spacing: 16px;
+    --max-width: 1200px;
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    float: left;
+}
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 0 0 var(--spacing);
+  }
+  
+  p {
+    margin: 4000px (--spacing);
+  }
+  
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: #020f0e;
+  }
+  
+  header h1 {
+    margin: -300px;
+  }
+  
+  nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: #371b1b;
+    text-decoration: none;
+    margin-right: var(--spacing);
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: var(--spacing);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing);
+  }
+  
+  main section {
+    background-color: #24375e;
+    box-shadow: 0 2px 4px rgba(107, 103, 103, 0.1);
+    padding: var(--spacing);
+  }
+  
+  main section:nth-child(even) {
+    background-color: var(--secondary-color);
+    color: #1d9296;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: #331987;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  /* Animate header text */
+header h1 {
+  animation: fadeInDown 1.5s ease-out;
+}
+
+/* Animate header background */
+header {
+  background-color: #7b7777; /* Change background color as needed */
+  animation: backgroundColorChange 2s ;
+}
+
+/* Keyframes for fadeInDown animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for background color change animation */
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #e21c1c; /* Change to desired color */
+  }
+  100% {
+    background-color: #333;
+  }
+}
+#about {
+  background-color: var(--primary-color);
+  color: #110202;
+  padding: var(--spacing);
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 1, 1, 0.1);
+  transform: skewY(-10deg);
+  z-index: -1;
+}
+
+#about .about-content {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing);
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: var(--spacing);
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#about p {
+  margin-bottom: var(--spacing);
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(16, 16, 16, 0.3);
+  color: white; /* Change paragraph text color to white */
+}
+
+
+#about a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--secondary-color);
+  padding-bottom: 2px;
+  transition: color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+}
+
+#about a:hover {
+  color: #fff;
+  border-bottom-color: #222222;
+}
+#about {
+  background-color: #f2f2f2; /* Change this to your desired color */
+  color: #333;
+  padding: var(--spacing);
+  position: relative;
+  overflow: hidden;
+}
+:root {
+  /* Define CSS variables for light mode */
+  --primary-color: rgb(43, 139, 190);
+  --secondary-color: rgb(127, 85, 233);
+  --spacing: 16px;
+  --max-width: 1200px;
+
+  /* Define CSS variables for dark mode */
+  --dark-primary-color: #333333;
+  --dark-secondary-color: #666666;
+  --dark-text-color: #ffffff;
+}
+
+/* Dark mode styles */
+body {
+  background-color: var(--dark-primary-color);
+  color: var(--dark-text-color);
+}
+
+header {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-text-color);
+}
+
+nav a {
+  color: var(--dark-text-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main section {
+  background-color: var(--dark-primary-color);
+  color: var(--dark-text-color);
+}
+
+main section:nth-child(even) {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-text-color);
+}
+
+footer {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-text-color);
+}
+
+footer p {
+  color: var(--dark-text-color);
+}
+
+#about {
+  background-color: var(--dark-primary-color);
+  color: var(--dark-text-color);
+}
+
+#about a {
+  color: var(--secondary-color); /* Keep secondary color for links */
+}
